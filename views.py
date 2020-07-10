@@ -1,4 +1,4 @@
-from app import app
+from app import *
 from flask import render_template
 import forms
 import os
@@ -7,6 +7,6 @@ import os
 def index():
     form = forms.Submit()
     message = form.data
-    os.system(message.data)
+    Imprimir(message.data)
     return render_template('index.html', form=form)
 
