@@ -13,7 +13,13 @@ db = SQLAlchemy(app)
 
 def Imprimir(mensagem):
     print(mensagem)
-    os.system(mensagem)
+    if mensagem == "Docker":
+        print("Dentro IF")
+        os.system(mensagem)
+    else:
+        print("Wait for it")
+
+
     return 0
     
 
