@@ -5,8 +5,15 @@ import os
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    
     form = forms.Submit()
-    message = form.data
-    Imprimir(message.data)
+    print(form.submit.data)
+    if form.submit.data == True:
+        print("SUBMITED")
+        Imprimir(1)
+    
+    
+  
+
     return render_template('index.html', form=form)
 

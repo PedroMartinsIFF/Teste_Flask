@@ -9,16 +9,13 @@ from views import *
 
 app.config.from_pyfile('config.py')
 
-db = SQLAlchemy(app)
-
 def Imprimir(mensagem):
     print(mensagem)
-    if mensagem == "Docker":
+    if mensagem == 1:
         print("Dentro IF")
-        os.system(mensagem)
+        os.system("Docker")
     else:
         print("Wait for it")
-
 
     return 0
     
